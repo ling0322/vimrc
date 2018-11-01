@@ -36,7 +36,7 @@ function! ToggleMouse()
         set mouse=a
     endif
 endfunc
-map <C-m> :call ToggleMouse()
+map <leader>m :call ToggleMouse()<CR>
 
 set number
 set cursorline
@@ -50,3 +50,9 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+au FileType cpp setl sw=2 sts=2 et
+au FileType c setl sw=2 sts=2 et
